@@ -1,0 +1,15 @@
+version: "3"
+services:
+  shipper:
+    image: lucamora/fluentd-humio
+    deploy:
+      mode: global
+      restart_policy:
+        condition: any
+    ports:
+      - "24224:24224"
+    environment:
+      HUMIO_HOST: 
+      HUMIO_TOKEN: 
+      HUMIO_DATASPACE: 
+      HUMIO_DOCKER: 
