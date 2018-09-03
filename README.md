@@ -137,8 +137,8 @@ Or if you use the docker-compose file
 version: "3"
 services:
   shipper:
-	image: lucamora/fluentd-humio:v1
-	...
+    image: lucamora/fluentd-humio:v1
+    ...
     volumes:
       - "path/to/your/fluent.conf:/fluentd/etc/"
 ```
