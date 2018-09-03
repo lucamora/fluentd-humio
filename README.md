@@ -73,7 +73,7 @@ services:
       HUMIO_DOCKER: <PARSER>
 ```
 
-#### Docker command
+#### Docker command
 ```bash
 docker stack deploy -c docker-compose.yml humio
 ```
@@ -115,4 +115,30 @@ services:
 #### Docker command
 ```bash
 docker stack deploy -c docker-compose.yml <STACK_NAME>
+```
+
+## Custom configuration
+If you want to edit the configuration file without building your own image you can edit the [original file](https://github.com/lucamora/fluentd-humio/blob/master/fluent.conf) and then bind it into the Docker container using the `-v` option.
+
+If you run your app in standalone mode:
+
+#### Docker command
+```bash
+docker run \
+... \
+-v "path/to/your/fluent.conf:/fluentd/etc/" \
+lucamora/fluentd-humio:v1
+```
+
+Or if you use the docker-compose file
+
+#### docker-compose.yml file
+```yaml
+version: "3"
+services:
+  shipper:
+	image: lucamora/fluentd-humio:v1
+	...
+    volumes:
+      - "path/to/your/fluent.conf:/fluentd/etc/"
 ```
