@@ -2,7 +2,7 @@
 Fluentd Docker image that ships data to Humio
 
 ## Overview
-This Docker image is based on [docker2humio](https://github.com/pmech/docker2humio) image that is able to send Docker container logs to [Humio](https://www.humio.com).
+This [Docker image](https://hub.docker.com/r/lucamora/fluentd-humio/) is based on [docker2humio](https://github.com/pmech/docker2humio) image that is able to send Docker container logs to [Humio](https://www.humio.com).
 
 At the core of fluentd-humio there is [fluentd](https://www.fluentd.org): an open source data collector for unified logging layer.
 
@@ -29,7 +29,7 @@ Where:
 ## Future improvements
 At the moment this image sends only Docker container logs received with the **forward** protocol, but future versions will be able to ship also other source of data like [nginx](http://nginx.org) and [mongodb](https://www.mongodb.com) logs.
 
-## Setup shipper container
+## Setup shipper container
 To run the shipper container, four environment variables must be set:
 - `HUMIO_HOST`: Humio URL
 - `HUMIO_TOKEN`: Humio ingest token
