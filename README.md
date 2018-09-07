@@ -53,7 +53,7 @@ lucamora/fluentd-humio:1.0.0
 
 Another way to run the shipper is to use the compose file (**suggested method**):
 
-*In this example is assumed that a swarm has been already initialized*
+*This example assumes that a swarm has already been initialized*
 
 #### docker-compose.yml file
 ```yaml
@@ -97,7 +97,7 @@ docker run \
 
 Another way to configure the container is to use the compose file (**suggested method**):
 
-*In this example is assumed that a swarm has been already initialized*
+*This example assumes that a swarm has already been initialized*
 
 #### docker-compose.yml file
 ```yaml
