@@ -48,10 +48,11 @@ docker run \
 -e HUMIO_DATASPACE=<DATASPACE> \
 -e HUMIO_DOCKER=<PARSER> \
 --name shipper \
-lucamora/fluentd-humio:v1
+lucamora/fluentd-humio:1.0.0
 ```
 
 Another way to run the shipper is to use the compose file (**suggested method**):
+
 *In this example is assumed that a swarm has been already initialized*
 
 #### docker-compose.yml file
@@ -59,7 +60,7 @@ Another way to run the shipper is to use the compose file (**suggested method**)
 version: "3"
 services:
   shipper:
-    image: lucamora/fluentd-humio:v1
+    image: lucamora/fluentd-humio:1.0.0
     deploy:
       mode: global
       restart_policy:
@@ -95,6 +96,7 @@ docker run \
 ```
 
 Another way to configure the container is to use the compose file (**suggested method**):
+
 *In this example is assumed that a swarm has been already initialized*
 
 #### docker-compose.yml file
@@ -127,7 +129,7 @@ If you run your app in standalone mode:
 docker run \
 ... \
 -v "path/to/your/fluent.conf:/fluentd/etc/" \
-lucamora/fluentd-humio:v1
+lucamora/fluentd-humio:1.0.0
 ```
 
 Or if you use the docker-compose file
@@ -137,7 +139,7 @@ Or if you use the docker-compose file
 version: "3"
 services:
   shipper:
-    image: lucamora/fluentd-humio:v1
+    image: lucamora/fluentd-humio:1.0.0
     ...
     volumes:
       - "path/to/your/fluent.conf:/fluentd/etc/"
