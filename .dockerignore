@@ -2,5 +2,6 @@ LICENSE
 README.md
 .dockerignore
 docker-compose.yml
+model.docker-compose.yml
 Dockerfile
 .gitignore
