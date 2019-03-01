@@ -1,7 +1,8 @@
-FROM pmech/docker2humio
+FROM fluent/fluentd:v0.12.43
 LABEL maintainer="Luca Morandini <luca.morandini98@gmail.com>"
 
-RUN rm -rf \
+RUN gem install fluent-plugin-elasticsearch -v 1.18.0 && \
+	rm -rf \
     /var/cache/apk/* \
     /tmp/* \
     /var/tmp/* \

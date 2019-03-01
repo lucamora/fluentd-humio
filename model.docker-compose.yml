@@ -9,7 +9,5 @@ services:
     ports:
       - "24224:24224"
     environment:
-      HUMIO_HOST: 
       HUMIO_TOKEN: 
-      HUMIO_DATASPACE: 
-      HUMIO_DOCKER: 
+      HUMIO_PARSER: 
