@@ -10,4 +10,4 @@ services:
       - "24224:24224"
     environment:
       HUMIO_TOKEN: 
-      HUMIO_PARSER: 
+      DOCKER_PARSER: 
