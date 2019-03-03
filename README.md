@@ -127,7 +127,8 @@ services:
 ```
 
 ## Migration from v1.1.0 to v2.0.0
-The previous version of the shipper worked the same of the current version, but some details in the configuration has changed.
+The previous version of the shipper worked the same of the current version, but some details in the configuration have changed.
+The only difference from v1.1.0 is that the `<SERVICE_NAME>` is shipped with `@service` field instead of `service`.
 
 #### Shipper container
 In the configuration rename `HUMIO_PARSER` with `DOCKER_PARSER`.
